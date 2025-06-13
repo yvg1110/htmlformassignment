@@ -18,11 +18,6 @@
     h1 {
       text-align: center;
     }
-    .note {
-      color: red;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
     label {
       display: inline-block;
       width: 120px;
@@ -43,10 +38,7 @@
     textarea {
       height: 60px;
     }
-    .highlight {
-      background-color: #ffff99;
-    }
-    .section-title {
+    h2 {
       font-weight: bold;
       margin-top: 20px;
       margin-bottom: 10px;
@@ -59,65 +51,65 @@
 <body>
   <div class="container">
     <h1>HTML form exercise</h1>
-    <form>
-      <div class="section-title">Contact form</div>
+    <form action="https://httpbin.org/post" method="post">
+      <h2>Contact form</h2>
       <label for="name1">Your name*:</label>
-      <input type="text" id="name1" class="highlight"><br>
+      <input type="text" id="name1" name="name1"><br>
 
       <label for="email">E-mail*:</label>
-      <input type="email" id="email" class="highlight"><br>
+      <input type="email" id="email" name="email"><br>
 
       <label for="phone">Phone number:</label>
-      <input type="text" id="phone"><br>
+      <input type="text" id="phone" name="phone"><br>
 
       <label for="website">Website*:</label>
-      <input type="url" id="website" placeholder="http://"><br>
+      <input type="url" id="website" name="website" placeholder="http://"><br>
 
       <label for="comments">Comments*:</label><br>
-      <textarea id="comments"></textarea><br>
+      <textarea id="comments" name="comments"></textarea><br>
 
-      <div class="section-title">Text field</div>
+      <h2>Text field</h2>
       <label for="name2">Your name:</label>
-      <input type="text" id="name2" class="highlight"><br>
+      <input type="text" id="name2" name="name2"><br>
 
-      <div class="section-title">Password field</div>
+      <h2>Password field</h2>
       <label for="password">Password:</label>
-      <input type="password" id="password"><br>
+      <input type="password" id="password" name="password"><br>
 
-      <div class="section-title">Radio buttons</div>
+      <h2>Radio buttons</h2>
       <label>Do you like pizza?</label><br>
       <input type="radio" name="pizza" value="yes"> Yes<br>
       <input type="radio" name="pizza" value="no"> No<br>
       <input type="radio" name="pizza" value="maybe"> Maybe<br>
       <input type="radio" name="pizza" value="never"> Never tried<br>
 
-      <div class="section-title">Check Box</div>
-      <input type="checkbox" id="like-service">
+      <h2>Check Box</h2>
+      <input type="checkbox" id="like-service" name="like_service">
       <label for="like-service">Check this box if you like our service</label><br>
 
-      <div class="section-title">Text area</div>
+      <h2>Text area</h2>
       <label for="extra-comments">Anything you would like to say?</label><br>
-      <textarea id="extra-comments"></textarea><br>
+      <textarea id="extra-comments" name="extra_comments"></textarea><br>
 
-      <div class="section-title">I Like</div>
+      <h2>I Like</h2>
       <select name="toppings" multiple size="5">
-        <option>mushrooms</option>
-        <option>green peppers</option>
-        <option>onions</option>
-        <option>tomatoes</option>
-        <option>olives</option>
+        <option value="mushrooms">mushrooms</option>
+        <option value="green_peppers">green peppers</option>
+        <option value="onions">onions</option>
+        <option value="tomatoes">tomatoes</option>
+        <option value="olives">olives</option>
       </select><br>
 
-      <div class="section-title">Menu</div>
+      <h2>Menu</h2>
       <label for="color">Your favorite color:</label>
-      <select id="color">
-        <option>red</option>
-        <option>blue</option>
-        <option>green</option>
+      <select id="color" name="color">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
       </select><br>
 
-      <div class="section-title">Attach file</div>
-      <input type="file"><br>
+      <h2>Attach file</h2>
+      <input type="file" name="uploaded_file"><br>
 
       <div class="buttons">
         <input type="submit" value="Submit">
